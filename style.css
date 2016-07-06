@@ -4,7 +4,6 @@ h1 {
     font-family: Impact;
     background-color: white;
     border-bottom: 4px solid #888;
-    border-right: 4px solid #888;
     padding: 20px;
     margin: 0 auto;
     position: relative;
@@ -12,37 +11,69 @@ h1 {
 }
 body {
     height: 100vh;
-    background: linear-gradient(lightgray, lightgray, skyblue);
+    background: linear-gradient(skyblue, lightgray, lightgray);
     background-attachment: fixed;
     overflow: hidden;
     margin: 0 0;
 }
 #body {
-    margin: 8px 8px;
+    margin: 8px auto;
+    width: 100%;
+}
+.container {
+    text-align: center;
+    margin: 0 auto;
 }
 * {
     transition: top 0.2s linear;
 }
-#button1 {
+.info {
+    display: inline-block;
+}
+.button {
+    display: inline-block;
     cursor: pointer;
+    background-color: orange;
+    color: white;
+    text-shadow: 1px 1px 0px #000;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px #666;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #555;
 }
-section.active {
-    max-height: 1000px;
-    visibility: visible;
-    opacity: 1;
-    transition: 1s;
-}
-section {
+.info .content {
+    text-align: left;
+    position: absolute;
     max-height: 0;
     background-color: #bbb;
     border-radius: 10px;
     width: 70%;
-    margin: 10px auto;
+    margin-left: -35vw;
     padding: 0 16px;
     overflow: hidden;
     visibility: hidden;
     box-shadow: 0px 0px 20px #888;
     border: 1px dashed black;
     opacity: 0;
-    transition: 1s;
+    z-index: 1;
+    transition: 1.5s, max-height 0.5s ease-out;
+}
+.active .content {
+    max-height: 1000px;
+    visibility: visible;
+    opacity: 0.9;
+    transition: 1.5s, max-height 1s ease-in;
+}
+
+.pictureContainer {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
 }
