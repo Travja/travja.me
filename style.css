@@ -20,6 +20,9 @@ body {
     margin: 8px auto;
     width: 100%;
 }
+#items {
+    display: inline-block;
+}
 .container {
     text-align: center;
     margin: 0 auto;
@@ -28,7 +31,12 @@ body {
     transition: top 0.2s linear;
 }
 .info {
+    position: relative;
     display: inline-block;
+}
+.info table {
+    width: 100px;
+    overflow: hidden;
 }
 .button {
     display: inline-block;
@@ -42,14 +50,14 @@ body {
     padding: 10px;
     border: 1px solid #555;
 }
-.info .content {
+#items div {
     text-align: left;
-    position: absolute;
+    position: relative;
     max-height: 0;
     background-color: #bbb;
     border-radius: 10px;
     width: 70%;
-    margin-left: -35vw;
+    margin: 0 auto;
     padding: 0 16px;
     overflow: hidden;
     visibility: hidden;
@@ -59,7 +67,7 @@ body {
     z-index: 1;
     transition: 1.5s, max-height 0.5s ease-out;
 }
-.active .content {
+#items .active {
     max-height: 1000px;
     visibility: visible;
     opacity: 0.9;
@@ -68,7 +76,7 @@ body {
 
 .pictureContainer {
     width: 150px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .picture {

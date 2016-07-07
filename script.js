@@ -1,29 +1,33 @@
 function select(obj) {
-    var parent = obj.parentElement.parentElement;
-    var children = parent.parentElement.children;
+    var parent = obj.parentElement;
+    var children = parent.children[3].children;
     
     //Clear other active items
     var changed = false;
+    var num = -1;
     for(var i = 0; i < children.length; i++) {
-        if(children[i].className=="info active" && children[i]!==parent) {
-            children[i].className="info";
+        if(parent.children[i]==obj)
+            num = i;
+        if(children[i].className=="active" && i != num) {
+            children[i].className="";
             changed = true;
         }
     }
     
     if(changed) {
         setTimeout(function () {
-            if(parent.className=="info active") {
-                parent.className="info";
+            if(children[num].className=="active") {
+                children[num].className="";
             } else {
-                parent.className="info active";
+                children[num].className="active";
             }
         }, 700);
     } else {
-        if(parent.className=="info active") {
-            parent.className="info";
+        console.log(children[num]);
+        if(children[num].className=="active") {
+            children[num].className="";
         } else {
-            parent.className="info active";
+            children[num].className="active";
         }
     }
 }
