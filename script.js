@@ -34,23 +34,31 @@ function select(obj) {
 
 window.onload = function () {
     $("#body").css('position', 'absolute');
+    $("#body").css('top', '75px');
 }
 
 $(document).bind('mousewheel', function(e){
   var delta = e.wheelDelta;
-  var inc = 50;
+  var inc = 75;
   var topOfPage = 75;
   if(delta < 0){
     var bottom = $("#body").position().top + $("#body").height();
     var top = $("#body").position().top;
     if(bottom >= $(window).height()) {
-        $("#body").css('top', (top-inc) + "px");
+        if(bottom-inc < $(window).height()) {
+            console.log("Height: " + $(window).height() + " - Diff to Bottom: " + (bottom-$(window).height()));
+            $("#body").css('top', top-(bottom-$(window).height()) + "px");
+        } else
+            $("#body").css('top', (top-inc) + "px");
     }
   }
   else{
     var top = $("#body").position().top;
     if(top <= topOfPage) {
-        $("#body").css('top', (top+inc) + "px");
+        if(top+inc > topOfPage)
+            $("#body").css('top', topOfPage + "px");
+        else
+            $("#body").css('top', (top+inc) + "px");
     }
   }
 });

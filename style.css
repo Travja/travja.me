@@ -47,6 +47,7 @@ body {
     border-radius: 10px;
     box-shadow: 3px 3px 2px #666;
     margin: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #555;
 }
@@ -84,4 +85,12 @@ body {
     width: 150px;
     height: 150px;
     border: 2px solid black;
+}
+
+.nirvana {
+    border-radius: 10px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    display: block;
+    box-shadow: 3px 3px 4px #555;
 }
