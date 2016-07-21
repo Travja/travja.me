@@ -1,0 +1,56 @@
+html { 
+    height: 100%;
+}
+body {
+    background: #000 url("http://kingofwallpapers.com/space/space-020.jpg") no-repeat right top;
+    background-size: 100% 100%;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+input {
+    padding: 15px;
+    font-family: Impact;
+    font-size: 24px;
+    border-radius: 4px;
+    align-self: center;
+    border: 1px solid #333;
+    background-color: lightgray;
+    box-shadow: 2px 2px 6px #aaa;
+}
+input::-webkit-input-placeholder {
+  color: gray;
+  font-style: italic; 
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.word {
+    font-family: Impact;
+    font-size: 18px;
+    color: #333;
+    border: 1px dotted black;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    top: -200px;
+    box-shadow: 2px 2px 6px #333;
+    padding: 10px;
+    animation: rotate 4s linear infinite;
+}
+
+img {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    top: 0px;
+    left: 0px;
+}
