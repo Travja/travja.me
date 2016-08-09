@@ -54,6 +54,7 @@ body {
     overflow: hidden;
 }
 .button {
+    transition: background-color 1s;
     display: inline-block;
     cursor: pointer;
     background-color: orange;
@@ -65,6 +66,10 @@ body {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #555;
+}
+.button.active {
+    transition: background-color 1s;
+    background-color: rgb(0, 145, 224);
 }
 .button:active {
     box-shadow: -3px -3px 2px #c78100 inset;
@@ -120,6 +125,16 @@ footer {
     padding-top: 3px;
     color: darkgray;
 }
+
+ul {
+    text-align: center;
+    list-style: none;
+}
+li {
+    display: inline-block;
+}
 a {
-    
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 0px #000;
 }

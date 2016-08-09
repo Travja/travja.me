@@ -1,4 +1,20 @@
+var previousClass = null;
+var prevObj = null;
+
 function select(obj) {
+    if(prevObj != null && previousClass != null)
+        prevObj.className = previousClass;
+    if(prevObj != obj) {
+        prevObj = obj;
+        previousClass= obj.className;
+        
+        obj.className = obj.className + " active";
+    } else {
+        obj.className = previousClass;
+        prevObj = null;
+        previousClass = null;
+    }
+    
     var parent = obj.parentElement;
     var children = parent.children[4].children;
     
@@ -23,7 +39,6 @@ function select(obj) {
             }
         }, 700);
     } else {
-        console.log(children[num]);
         if(children[num].className=="active") {
             children[num].className="";
         } else {
