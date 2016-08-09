@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>todos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black+Ops+One" />
+        <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet'>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script>
+            $(window).load(function() {
+                $("body").removeClass("preload");
+            });
+        </script>
+        <script src="script.js"></script>
+    </head>
+    <body class="preload">
+        <header>
+            <h1>todos</h1>
+        </header>
+        <section id="box">
+            <form>
+                <input id="input" type="text" placeholder="What needs to be done?" onkeydown="addItem(this);" />
+            </form>
+            <ul id="items">
+            </ul>
+            <ul id="footer">
+                <li id="count">0 items left</li>
+                <ul id="options">
+                    <li id="all" class="active" onclick="select(this);">All</li>
+                    <li id="activeItems" onclick="select(this);">Active</li></a>
+                    <li id="completeItems" onclick="select(this);">Completed</li>
+                </ul>
+                <li id="clearCompleted" onclick="clearCompleted();">Clear Completed</li>
+            </ul>
+        </section>
+        <section style="width: 35%; margin: 0 auto;">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </section>
+    </body>
+</html>

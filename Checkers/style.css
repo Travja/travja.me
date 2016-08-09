@@ -1,0 +1,82 @@
+tr:nth-child(odd)>td:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+tr:nth-child(even)>td:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+tr:nth-child(odd)>td:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+tr:nth-child(even)>td:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+body {
+    background: white url("http://hfcentre.com/content/catalog/hardwood/lauzon_hardwood/ambiance_collection/natural_ambiance_yellow_birch_heritage/naturalpacific-natural-ambiance-lauzon.jpg") no-repeat;
+    text-align: center;
+}
+td {
+    width: 50px;
+    height: 50px;
+}
+table {
+    margin: 25px auto 5px auto;
+    border-spacing: 0;
+    border-radius: 10px;
+    box-shadow: 6px 6px 30px #222;
+}
+tr:first-child>td:first-child {
+    border-radius: 10px 0 0 0;
+}
+tr:first-child>td:last-child {
+    border-radius: 0 10px 0 0;
+}
+tr:last-child>td:first-child {
+    border-radius: 0 0 0 10px;
+}
+tr:last-child>td:last-child {
+    border-radius: 0 0 10px 0;
+}
+td, tr {
+    border: 0.5px solid gray;
+    text-align: center;
+}
+.blackChecker, .redChecker, .blackChecker[king="true"], .redChecker[king="true"] {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px #ddd inset;
+}
+.blackChecker {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.blackChecker[king="true"] {
+    background: rgba(0, 0, 0, 0.6) url("http://cliparts.co/cliparts/8Tx/KaB/8TxKaBgpc.png") center/30px 30px no-repeat;
+}
+.redChecker {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+.redChecker[king="true"] {
+    background: rgba(255, 0, 0, 0.4) url("http://cliparts.co/cliparts/8Tx/KaB/8TxKaBgpc.png") center/30px 30px no-repeat;
+}
+.active {
+    box-shadow: 2px 2px 4px #ddd inset, 2px 2px 2px #aaa, -2px -2px 2px #aaa, -2px 2px 2px #aaa, 2px -2px 2px #aaa !important;
+}
+#turn {
+    margin-bottom: 10px;
+}
+
+#redWin, #blackWin {
+    font-family: Impact;
+    font-size: 80px;
+    text-shadow: 5px 5px 0px #555;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100vw;
+    margin-top: 200px;
+    text-align: center;
+}

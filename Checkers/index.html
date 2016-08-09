@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <header>
+        <title>Checkers</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </header>
+    <body>
+        <table id="board">
+            <tr class="row1">
+                <td class="box 1 black"></td>
+                <td class="box 2"></td>
+                <td class="box 3 black"></td>
+                <td class="box 4"></td>
+                <td class="box 5 black"></td>
+                <td class="box 6"></td>
+                <td class="box 7 black"></td>
+                <td class="box 8"></td>
+            </tr>
+            <tr class="row2">
+                <td class="box 1"></td>
+                <td class="box 2 black"></td>
+                <td class="box 3"></td>
+                <td class="box 4 black"></td>
+                <td class="box 5"></td>
+                <td class="box 6 black"></td>
+                <td class="box 7"></td>
+                <td class="box 8 black"></td>
+            </tr>
+            <tr class="row3">
+                <td class="box 1 black"></td>
+                <td class="box 2"></td>
+                <td class="box 3 black"></td>
+                <td class="box 4"></td>
+                <td class="box 5 black"></td>
+                <td class="box 6"></td>
+                <td class="box 7 black"></td>
+                <td class="box 8"></td>
+            </tr>
+            <tr class="row4">
+                <td class="box 1"></td>
+                <td class="box 2"></td>
+                <td class="box 3"></td>
+                <td class="box 4"></td>
+                <td class="box 5"></td>
+                <td class="box 6"></td>
+                <td class="box 7"></td>
+                <td class="box 8"></td>
+            </tr>
+            <tr class="row5">
+                <td class="box 1"></td>
+                <td class="box 2"></td>
+                <td class="box 3"></td>
+                <td class="box 4"></td>
+                <td class="box 5"></td>
+                <td class="box 6"></td>
+                <td class="box 7"></td>
+                <td class="box 8"></td>
+            </tr>
+            <tr class="row6">
+                <td class="box 1"></td>
+                <td class="box 2 red"></td>
+                <td class="box 3"></td>
+                <td class="box 4 red"></td>
+                <td class="box 5"></td>
+                <td class="box 6 red"></td>
+                <td class="box 7"></td>
+                <td class="box 8 red"></td>
+            </tr>
+            <tr class="row7">
+                <td class="box 1 red"></td>
+                <td class="box 2"></td>
+                <td class="box 3 red"></td>
+                <td class="box 4"></td>
+                <td class="box 5 red"></td>
+                <td class="box 6"></td>
+                <td class="box 7 red"></td>
+                <td class="box 8"></td>
+            </tr>
+            <tr class="row8">
+                <td class="box 1"></td>
+                <td class="box 2 red"></td>
+                <td class="box 3"></td>
+                <td class="box 4 red"></td>
+                <td class="box 5"></td>
+                <td class="box 6 red"></td>
+                <td class="box 7"></td>
+                <td class="box 8 red"></td>
+            </tr>
+        </table>
+        <div id="redWin">Red Wins!</div>
+        <div id="blackWin">Black Wins!</div>
+        <button style="visibility: hidden" id="cancel" onclick="cancelDouble()">Click Here To Stop Jumping</button>
+        <div id="turn"></div>
+        <button id="start" onclick="update()">Start Game</button>
+    </body>
+</html>

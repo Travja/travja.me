@@ -1,0 +1,174 @@
+h1 {
+    font-size: 100px;
+    text-align: center;
+    color: #ccc;
+    font-weight: normal;
+    margin: 0.25em 0;
+    text-shadow: 3px 3px 4px #fff;
+}
+.preload * {
+ -webkit-transition: none !important;
+ -moz-transition: none !important;
+ -ms-transition: none !important;
+ -o-transition: none !important;
+ transition: none !important;
+}
+body {
+    background-color: #eee;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+#box {
+    width: 35%;
+    box-shadow: 4px 0 8px #aaa, -4px 0 8px #aaa;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+}
+input {
+    border: none;
+    width: 100%;
+    height: 50px;
+    text-indent: 10px;
+    letter-spacing: 1px;
+    font-family:  Arial, sans-serif;
+    font-size: 24px;
+    display: inline-block;
+    color: lightgray;
+    text-decoration: italic;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#items {
+    box-sizing: border-box;
+}
+#items li.item {
+    height: 30px;
+    transition: 0.5s;
+    border-top: 1px solid lightgray;
+    background-color: white;
+    padding: 10px 0 10px 0px;
+    overflow: hidden;
+}
+#items li.completed {
+    transition: 0.5s;
+    text-decoration: line-through;
+    color: lightgray;
+}
+#items .circle {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px;
+    text-indent: 3px;
+    cursor: pointer;
+}
+.circle p {
+    position: relative;
+    bottom: 8px;
+    left: 2px;
+    margin: 0;
+    color: green;
+}
+#items .x {
+    float: right;
+    color: red;
+    font-family: "Black Ops One";
+    position: relative;
+    right: 10px;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+#items li.item div {
+    transition: 0.5s;
+    text-decoration: none;
+}
+#items li.item:hover div.x {
+    opacity: 1;
+    visibility: visible;
+}
+#items li.item:hover div.circle {
+    border: 1px solid #bbb;
+}
+
+#footer {
+    font-size: 12px;
+    margin: 0;
+    padding: 3px;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+#footer * {
+    display: inline-block;
+    margin: 0;
+    padding: 2px;
+    color: darkgray;
+}
+
+#footer #count, #footer #clearCompleted {
+    margin-top: 4px;
+}
+
+#clearCompleted {
+    cursor: pointer;
+}
+
+#options {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#count {
+    float: left;
+}
+
+#clearCompleted {
+    float: right;
+    visibility: hidden;
+}
+
+.active {
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #ddd;
+}
+
+#options * {
+    color: black;
+    cursor: pointer;
+    margin: 0 3px;
+    padding: 3px;
+    color: darkgray;
+}
+
+.one, .two, .three {
+    height: 2px;
+    border: 1px solid #ddd;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 4px 0 8px #aaa, -4px 0 8px #aaa;
+}
+
+.one {
+    z-index: 3;
+    width: 99%;
+}
+
+.two {
+    z-index: 2;
+    width: 98%;
+}
+
+.three {
+    z-index: 1;
+    width: 97%;
+}
